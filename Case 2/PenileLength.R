@@ -1,3 +1,5 @@
+# Duc Anh, DCS 105 A Calling Bull
+# BS #2, Distribution of penile length bar chart, Dec 12, 2020
 library(ggplot2)
 #import data
 aveSalary <- c(58, 48, 36, 32, 38, 27)
@@ -21,12 +23,12 @@ p + geom_col(aes(lengths, noOfResponse, fill = noOfResponse)) +
   ggtitle("Distribution of penile length from 1000 random people") +
   ylab("Percentage of response(%)") + 
   xlab("(Erect) penile length(inches)") +
+  #delete back ground color and change axis color
   theme(
     plot.background = element_rect(fill = "white"),
     panel.background = element_rect(fill = "white"),
     axis.line = element_line(color = "#00C9FF"),
-    axis.text = element_text(color = "black"),
-    plot.title = element_text(color = "#00C9FF")
+    axis.text = element_text(color = "black")
   ) +
   #Make the bar starts at 0
   scale_y_continuous(expand = c(0, 0), limits = c(0, NA)) 
