@@ -18,11 +18,11 @@ p <- ggplot(df)
 
 #Create color bar
 p + geom_col(aes(lengths, noOfResponse, fill = noOfResponse)) +
-  #https://uigradients.com/#BackToEarth
-  scale_fill_gradient2(name = "% Response", high="#00C9FF", low = "#92FE9D") + 
+  #https://uigradients.com/#JShine: Jshine color
+  scale_fill_gradient2(name = "% Response", high="#f64f59", mid = "#c471ed", low = "#12c2e9") + 
   ggtitle("Distribution of penile length from 1000 random people") +
   ylab("Percentage of response(%)") + 
-  xlab("(Erect) penile length(inches)") +
+  xlab("Erect penile length(inches)") +
   #delete back ground color and change axis color
   theme(
     plot.background = element_rect(fill = "white"),
